@@ -17,8 +17,8 @@ export default function Header() {
             className="w-12 h-12 rounded-full object-cover border-2 border-white"
           />
           <div>
-            <p className="font-semibold text-sm">ครูฤทัยรัตน์ คำดี</p>
-            <p className="text-xs text-teal-100">ผู้สอน</p>
+            <p className="font-semibold text-sm text-slate-800">ครูฤทัยรัตน์ คำดี</p>
+            <p className="text-xs text-slate-600">ผู้สอน</p>
           </div>
         </div>
       </div>
