@@ -8,6 +8,7 @@ import { lessons, daySchedule } from "@/data/lessons";
 import Sidebar from "@/components/Sidebar";
 import { motion } from "framer-motion";
 import { BookOpen, Code, Target, Clock, ChevronRight, Lightbulb, GraduationCap, Rocket } from "lucide-react";
+import { useAuth } from "@/_core/hooks/useAuth";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663090084433/DwmSBQhGF9QneEQAyktCzx/hero-banner-NPkNHfhHxf4Faj4ZLKSfYh.webp";
 const CODING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663090084433/DwmSBQhGF9QneEQAyktCzx/coding-illustration-RZtyNKRGfyxJ7TmuNKwXQb.webp";
@@ -25,6 +26,10 @@ const fadeUp = {
 };
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   return (
     <div className="flex min-h-screen bg-background">
       <Sidebar />
