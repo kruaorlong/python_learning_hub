@@ -26,6 +26,31 @@ export const appRouter = router({
         return await executePythonCode(input.code);
       }),
   }),
+
+  quiz: router({
+    submitQuiz: publicProcedure
+      .input(z.object({
+        lessonId: z.number(),
+        lessonTitle: z.string(),
+        answers: z.record(z.number(), z.number()),
+        score: z.number(),
+        totalQuestions: z.number(),
+        percentage: z.number(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        if (ctx.user) {
+          console.log(`Quiz submitted by user ${ctx.user.id}: Lesson ${input.lessonId}, Score: ${input.score}/${input.totalQuestions}`);
+        }
+        
+        return {
+          success: true,
+          message: 'บันทึกผลการทำแบบทดสอบสำเร็จ',
+          score: input.score,
+          totalQuestions: input.totalQuestions,
+          percentage: input.percentage,
+        };
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;

@@ -5,9 +5,11 @@
 import { useParams, Link } from "wouter";
 import { lessons } from "@/data/lessons";
 import { getExercisesForLesson } from "@/data/exercises";
+import { quizzes } from "@/data/quizzes";
 import Sidebar from "@/components/Sidebar";
 import CodeBlock from "@/components/CodeBlock";
 import InteractiveExercise from "@/components/InteractiveExercise";
+import QuizComponent from "@/components/QuizComponent";
 import { motion } from "framer-motion";
 import {
   ChevronLeft,
@@ -224,11 +226,25 @@ export default function LessonPage() {
             </motion.section>
           )}
 
+          {/* Quiz */}
+          {quizzes.find(q => q.lessonId === lesson.id) && (
+            <motion.section
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.48 }}
+              className="mb-10"
+            >
+              <QuizComponent 
+                quiz={quizzes.find(q => q.lessonId === lesson.id)!}
+              />
+            </motion.section>
+          )}
+
           {/* Key Points */}
           <motion.section
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.55 }}
             className="mb-10"
           >
             <div className="flex items-center gap-2 mb-4">
