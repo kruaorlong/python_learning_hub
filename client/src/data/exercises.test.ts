@@ -14,8 +14,13 @@ describe('Exercises Data', () => {
     }
   });
 
-  it('should return empty array for lessons without exercises', () => {
+  it('should return exercises for lesson 1', () => {
     const exercises = getExercisesForLesson(1);
+    expect(exercises.length).toBeGreaterThan(0);
+  });
+
+  it('should return empty array for lessons without exercises', () => {
+    const exercises = getExercisesForLesson(99);
     expect(exercises).toEqual([]);
   });
 
