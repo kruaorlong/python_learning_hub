@@ -4,7 +4,7 @@
  */
 import { useParams, Link } from "wouter";
 import { lessons } from "@/data/lessons";
-import { getExercisesForLesson } from "@/data/exercises";
+import { exercisesByLesson } from "@/data/exercises";
 import { quizzes } from "@/data/quizzes";
 import Sidebar from "@/components/Sidebar";
 import CodeBlock from "@/components/CodeBlock";
@@ -212,7 +212,7 @@ export default function LessonPage() {
           </motion.section>
 
           {/* Interactive Exercises */}
-          {getExercisesForLesson(lesson.id).length > 0 && (
+          {exercisesByLesson[lesson.id]?.length > 0 && (
             <motion.section
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -221,7 +221,7 @@ export default function LessonPage() {
             >
               <InteractiveExercise
                 lessonTitle={lesson.title}
-                exercises={getExercisesForLesson(lesson.id)}
+                exercises={exercisesByLesson[lesson.id] || []}
               />
             </motion.section>
           )}

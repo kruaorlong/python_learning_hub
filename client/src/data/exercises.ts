@@ -17,37 +17,27 @@ export const exercisesByLesson: Record<number, Exercise[]> = {
   1: [
     {
       id: "1",
-      title: "เขียน Pseudocode สำหรับการคำนวณพื้นที่สี่เหลี่ยม",
-      description: "เขียน Pseudocode ในการคำนวณพื้นที่สี่เหลี่ยมผืนผ้า แล้วแปลงเป็นโค้ด Python",
-      hint: "Pseudocode ควรมีขั้นตอน: 1) รับความกว้าง 2) รับความยาว 3) คำนวณพื้นที่ 4) แสดงผล",
-      starterCode: `# Pseudocode
-# 1. รับค่าความกว้าง (width)
-# 2. รับค่าความยาว (length)
-# 3. คำนวณพื้นที่ = width * length
-# 4. แสดงผลพื้นที่
-
-# โค้ด Python
-width = 5
-length = 10
-area = width * length
-print(f"พื้นที่ = {area}")`,
-      expectedOutput: `พื้นที่ = 50`,
+      title: "เขียน Pseudocode และโค้ด Python สำหรับการคำนวณพื้นที่สี่เหลี่ยม",
+      description: "เขียนโค้ด Python ในการคำนวณพื้นที่สี่เหลี่ยมผืนผ้า เมื่อกำหนดความกว้าง = 5 และความยาว = 10",
+      hint: "ขั้นตอน: 1) กำหนดตัวแปร width = 5 และ length = 10 2) คำนวณพื้นที่ = width * length 3) แสดงผลด้วย print()",
+      starterCode: "",
+      expectedOutput: `50`,
     },
     {
       id: "2",
-      title: "ระบุขั้นตอนการแก้ปัญหา",
-      description: "เขียนโค้ด Python ตามขั้นตอนการแก้ปัญหา: 1) รับข้อมูล 2) ประมวลผล 3) แสดงผล",
-      hint: "ใช้ input() เพื่อรับข้อมูล แล้วแปลงเป็นตัวเลขด้วย int()",
-      starterCode: `# ขั้นตอนที่ 1: รับข้อมูล
-num1 = 5
-num2 = 3
-
-# ขั้นตอนที่ 2: ประมวลผล
-sum_result = num1 + num2
-
-# ขั้นตอนที่ 3: แสดงผล
-print(f"ผลบวก = {sum_result}")`,
-      expectedOutput: `ผลบวก = 8`,
+      title: "เขียนโค้ดสำหรับการบวกเลขสองตัว",
+      description: "เขียนโค้ด Python ที่บวกเลขสองตัว (5 และ 3) แล้วแสดงผลลัพธ์",
+      hint: "ใช้ตัวแปรเก็บค่า แล้วใช้ + เพื่อบวก และ print() เพื่อแสดงผล",
+      starterCode: "",
+      expectedOutput: `8`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดสำหรับการแสดงข้อมูลส่วนตัว",
+      description: "เขียนโค้ด Python ที่แสดงชื่อ อายุ และอาชีพของคุณ",
+      hint: "ใช้ตัวแปรเก็บข้อมูล แล้วใช้ print() เพื่อแสดงผล สามารถใช้ f-string ได้",
+      starterCode: "",
+      expectedOutput: `ชื่อ: [ชื่อของคุณ], อายุ: [อายุ], อาชีพ: [อาชีพ]`,
     },
   ],
 
@@ -55,42 +45,27 @@ print(f"ผลบวก = {sum_result}")`,
   2: [
     {
       id: "1",
-      title: "วิเคราะห์ปัญหาและเขียน Pseudocode",
-      description: "วิเคราะห์ปัญหา: หาค่าเฉลี่ยของตัวเลข 3 ตัว แล้วเขียน Pseudocode และโค้ด Python",
-      hint: "ค่าเฉลี่ย = (ตัวเลข1 + ตัวเลข2 + ตัวเลข3) / 3",
-      starterCode: `# Pseudocode
-# 1. รับตัวเลข 3 ตัว
-# 2. คำนวณผลบวก
-# 3. หารด้วย 3
-# 4. แสดงค่าเฉลี่ย
-
-# โค้ด Python
-num1 = 10
-num2 = 20
-num3 = 30
-average = (num1 + num2 + num3) / 3
-print(f"ค่าเฉลี่ย = {average}")`,
-      expectedOutput: `ค่าเฉลี่ย = 20.0`,
+      title: "เขียนโค้ดสำหรับการคำนวณค่าเฉลี่ย",
+      description: "เขียนโค้ด Python ที่คำนวณค่าเฉลี่ยของเลขสามตัว (10, 20, 30)",
+      hint: "บวกเลขทั้งสามตัว แล้วหารด้วย 3",
+      starterCode: "",
+      expectedOutput: `20`,
     },
     {
       id: "2",
-      title: "แปลง Pseudocode เป็นโค้ด Python",
-      description: "แปลง Pseudocode ต่อไปนี้เป็นโค้ด Python: หากอายุ >= 18 ให้พิมพ์ 'ผู้ใหญ่' ไม่เช่นนั้นพิมพ์ 'เด็ก'",
-      hint: "ใช้ if-else statement",
-      starterCode: `# Pseudocode
-# IF age >= 18 THEN
-#   PRINT "ผู้ใหญ่"
-# ELSE
-#   PRINT "เด็ก"
-# END IF
-
-# โค้ด Python
-age = 20
-if age >= 18:
-    print("ผู้ใหญ่")
-else:
-    print("เด็ก")`,
-      expectedOutput: `ผู้ใหญ่`,
+      title: "เขียนโค้ดสำหรับการแปลงอุณหภูมิ",
+      description: "เขียนโค้ด Python ที่แปลงอุณหภูมิจากเซลเซียส (25°C) เป็นฟาเรนไฮต์ โดยใช้สูตร F = (C × 9/5) + 32",
+      hint: "กำหนดตัวแปร C = 25 แล้วใช้สูตรในการคำนวณ",
+      starterCode: "",
+      expectedOutput: `77`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดสำหรับการคำนวณราคาหลังลด",
+      description: "เขียนโค้ด Python ที่คำนวณราคาสินค้าหลังลดราคา 20% จากราคาเดิม 1000 บาท",
+      hint: "ราคาลด = ราคาเดิม × 0.20, ราคาหลังลด = ราคาเดิม - ราคาลด",
+      starterCode: "",
+      expectedOutput: `800`,
     },
   ],
 
@@ -98,50 +73,27 @@ else:
   3: [
     {
       id: "1",
-      title: "เขียน Algorithm สำหรับหาค่ามากที่สุด",
-      description: "เขียน Algorithm ในการหาค่ามากที่สุดจากตัวเลข 3 ตัว แล้วแปลงเป็นโค้ด Python",
-      hint: "Algorithm: 1) เปรียบเทียบตัวเลขที่ 1 กับ 2 2) เปรียบเทียบผลลัพธ์กับตัวเลขที่ 3",
-      starterCode: `# Algorithm
-# 1. รับตัวเลข 3 ตัว: a, b, c
-# 2. ถ้า a > b แล้ว max = a ไม่เช่นนั้น max = b
-# 3. ถ้า max > c แล้ว max = max ไม่เช่นนั้น max = c
-# 4. แสดงค่า max
-
-# โค้ด Python
-a = 15
-b = 25
-c = 20
-
-max_val = a
-if b > max_val:
-    max_val = b
-if c > max_val:
-    max_val = c
-
-print(f"ค่ามากที่สุด = {max_val}")`,
-      expectedOutput: `ค่ามากที่สุด = 25`,
+      title: "เขียนโค้ดสำหรับการหาค่าที่มากที่สุด",
+      description: "เขียนโค้ด Python ที่หาค่าที่มากที่สุดระหว่างเลขสามตัว (15, 8, 23)",
+      hint: "ใช้ if-else เพื่อเปรียบเทียบ หรือใช้ฟังก์ชัน max()",
+      starterCode: "",
+      expectedOutput: `23`,
     },
     {
       id: "2",
-      title: "เขียน Algorithm สำหรับการนับจำนวน",
-      description: "เขียน Algorithm ในการนับจำนวนตัวเลขคู่จากรายการ แล้วแปลงเป็นโค้ด Python",
-      hint: "ใช้ loop เพื่อตรวจสอบแต่ละตัวเลข และใช้ modulo (%) เพื่อตรวจสอบว่าเป็นเลขคู่",
-      starterCode: `# Algorithm
-# 1. กำหนด count = 0
-# 2. FOR แต่ละตัวเลขในรายการ
-#    IF ตัวเลข % 2 == 0 THEN
-#      count = count + 1
-#    END IF
-# 3. แสดง count
-
-# โค้ด Python
-numbers = [1, 2, 3, 4, 5, 6, 7, 8]
-count = 0
-for num in numbers:
-    if num % 2 == 0:
-        count += 1
-print(f"จำนวนเลขคู่ = {count}")`,
-      expectedOutput: `จำนวนเลขคู่ = 4`,
+      title: "เขียนโค้ดสำหรับการตรวจสอบเลขคู่หรือเลขคี่",
+      description: "เขียนโค้ด Python ที่ตรวจสอบว่าเลข 42 เป็นเลขคู่หรือเลขคี่",
+      hint: "ใช้ % (modulo) เพื่อหาเศษ ถ้าเศษ = 0 แสดงว่าเป็นเลขคู่",
+      starterCode: "",
+      expectedOutput: `เลขคู่`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดสำหรับการคำนวณค่าแฟกทอเรียล",
+      description: "เขียนโค้ด Python ที่คำนวณแฟกทอเรียลของ 5 (5! = 5 × 4 × 3 × 2 × 1)",
+      hint: "ใช้ loop หรือ recursion เพื่อคำนวณ",
+      starterCode: "",
+      expectedOutput: `120`,
     },
   ],
 
@@ -149,141 +101,83 @@ print(f"จำนวนเลขคู่ = {count}")`,
   4: [
     {
       id: "1",
-      title: "แปลง Flowchart เป็นโค้ด Python",
-      description: "แปลง Flowchart ต่อไปนี้เป็นโค้ด Python: ตรวจสอบว่าตัวเลขเป็นบวก ลบ หรือศูนย์",
-      hint: "Flowchart: START → รับ num → ถ้า num > 0? → YES: พิมพ์ 'บวก' → NO: ถ้า num < 0? → YES: พิมพ์ 'ลบ' → NO: พิมพ์ 'ศูนย์' → END",
-      starterCode: `# Flowchart Description
-# START
-# INPUT num
-# IF num > 0 THEN
-#   OUTPUT "บวก"
-# ELSE IF num < 0 THEN
-#   OUTPUT "ลบ"
-# ELSE
-#   OUTPUT "ศูนย์"
-# END IF
-# END
-
-# โค้ด Python
-num = 5
-if num > 0:
-    print("บวก")
-elif num < 0:
-    print("ลบ")
-else:
-    print("ศูนย์")`,
-      expectedOutput: `บวก`,
+      title: "เขียนโค้ดตามผังงาน: ตรวจสอบอายุ",
+      description: "เขียนโค้ด Python ที่ตรวจสอบว่าอายุ 18 ปี เป็นผู้เยาว์หรือผู้ใหญ่",
+      hint: "ถ้าอายุ >= 18 แสดง 'ผู้ใหญ่' มิฉะนั้นแสดง 'ผู้เยาว์'",
+      starterCode: "",
+      expectedOutput: `ผู้ใหญ่`,
     },
     {
       id: "2",
-      title: "ออกแบบ Flowchart และเขียนโค้ด",
-      description: "ออกแบบ Flowchart สำหรับการตรวจสอบว่าตัวเลขเป็นเลขคู่หรือเลขคี่ แล้วเขียนโค้ด Python",
-      hint: "ใช้ modulo (%) เพื่อตรวจสอบ: ถ้า num % 2 == 0 เป็นเลขคู่",
-      starterCode: `# Flowchart
-# START
-# INPUT num
-# IF num % 2 == 0 THEN
-#   OUTPUT "เลขคู่"
-# ELSE
-#   OUTPUT "เลขคี่"
-# END IF
-# END
-
-# โค้ด Python
-num = 7
-if num % 2 == 0:
-    print("เลขคู่")
-else:
-    print("เลขคี่")`,
-      expectedOutput: `เลขคี่`,
-    },
-  ],
-
-  // Lesson 5: Pseudocode and Python Introduction
-  5: [
-    {
-      id: "1",
-      title: "แปลง Pseudocode เป็นโค้ด Python",
-      description: "แปลง Pseudocode ต่อไปนี้เป็นโค้ด Python: คำนวณอายุจากปีเกิด",
-      hint: "ปีปัจจุบัน = 2567, อายุ = ปีปัจจุบัน - ปีเกิด",
-      starterCode: `# Pseudocode
-# DECLARE birth_year = 2545
-# DECLARE current_year = 2567
-# CALCULATE age = current_year - birth_year
-# PRINT age
-
-# โค้ด Python
-birth_year = 2545
-current_year = 2567
-age = current_year - birth_year
-print(f"อายุ = {age} ปี")`,
-      expectedOutput: `อายุ = 22 ปี`,
-    },
-    {
-      id: "2",
-      title: "เขียน Pseudocode และโค้ด Python",
-      description: "เขียน Pseudocode สำหรับการคำนวณค่าสินค้าหลังลด (ราคา - ส่วนลด) แล้วแปลงเป็นโค้ด Python",
-      hint: "ส่วนลด = ราคา * เปอร์เซ็นต์ส่วนลด / 100, ราคาสุดท้าย = ราคา - ส่วนลด",
-      starterCode: `# Pseudocode
-# DECLARE price = 1000
-# DECLARE discount_percent = 20
-# CALCULATE discount = price * discount_percent / 100
-# CALCULATE final_price = price - discount
-# PRINT final_price
-
-# โค้ด Python
-price = 1000
-discount_percent = 20
-discount = price * discount_percent / 100
-final_price = price - discount
-print(f"ราคาสุดท้าย = {final_price} บาท")`,
-      expectedOutput: `ราคาสุดท้าย = 800.0 บาท`,
-    },
-  ],
-
-  // Lesson 6: Python Basics - Variables, Data Types, Operators
-  6: [
-    {
-      id: "1",
-      title: "สร้างตัวแปรและแสดงผล",
-      description: "สร้างตัวแปรชื่อ name และ age แล้วแสดงผลออกมา",
-      hint: "ใช้ print() เพื่อแสดงผล ตัวแปรสามารถเก็บข้อมูลได้",
-      starterCode: `# สร้างตัวแปร
-name = "ชื่อของคุณ"
-age = 20
-
-# แสดงผล
-print(name)
-print(age)`,
-      expectedOutput: `ชื่อของคุณ\n20`,
-    },
-    {
-      id: "2",
-      title: "คำนวณ BMI",
-      description: "สร้างฟังก์ชัน calculate_bmi(weight, height) คำนวณ BMI",
-      hint: "BMI = weight / (height ** 2)",
-      starterCode: `def calculate_bmi(weight, height):
-    # เขียนโค้ดของคุณที่นี่
-    pass
-
-# ทดสอบ
-result = calculate_bmi(70, 1.75)
-print(f"BMI: {result}")`,
-      expectedOutput: `BMI: 22.857142857142858`,
+      title: "เขียนโค้ดตามผังงาน: ตรวจสอบเกรด",
+      description: "เขียนโค้ด Python ที่ตรวจสอบเกรดตามคะแนน 85 (90-100: A, 80-89: B, 70-79: C, <70: F)",
+      hint: "ใช้ if-elif-else เพื่อตรวจสอบช่วงคะแนน",
+      starterCode: "",
+      expectedOutput: `B`,
     },
     {
       id: "3",
-      title: "ตรวจสอบเลขคู่",
-      description: "สร้างฟังก์ชัน is_even(num) ที่ return True ถ้าเป็นเลขคู่",
-      hint: "ใช้ num % 2 == 0",
-      starterCode: `def is_even(num):
-    # เขียนโค้ดของคุณที่นี่
-    pass
+      title: "เขียนโค้ดตามผังงาน: หาค่าที่มากที่สุดของสามตัวเลข",
+      description: "เขียนโค้ด Python ที่หาค่าที่มากที่สุดระหว่าง 45, 67, 23",
+      hint: "เปรียบเทียบตัวแรกกับตัวที่สอง แล้วเปรียบเทียบผลลัพธ์กับตัวที่สาม",
+      starterCode: "",
+      expectedOutput: `67`,
+    },
+  ],
 
-# ทดสอบ
-print(is_even(4))   # ควรเป็น True
-print(is_even(7))   # ควรเป็น False`,
-      expectedOutput: `True\nFalse`,
+  // Lesson 5: Pseudocode
+  5: [
+    {
+      id: "1",
+      title: "เขียนโค้ดจาก Pseudocode: คำนวณพื้นที่วงกลม",
+      description: "เขียนโค้ด Python จาก Pseudocode ต่อไปนี้:\n1. รับค่ารัศมี (r = 7)\n2. คำนวณพื้นที่ = π × r²\n3. แสดงผล",
+      hint: "ใช้ import math เพื่อเรียกใช้ค่า pi และใช้ ** เพื่อยกกำลัง",
+      starterCode: "",
+      expectedOutput: `153.94`,
+    },
+    {
+      id: "2",
+      title: "เขียนโค้ดจาก Pseudocode: ตรวจสอบจำนวนเฉพาะ",
+      description: "เขียนโค้ด Python ที่ตรวจสอบว่าเลข 17 เป็นจำนวนเฉพาะหรือไม่",
+      hint: "จำนวนเฉพาะคือจำนวนที่หารด้วย 1 และตัวมันเองเท่านั้น",
+      starterCode: "",
+      expectedOutput: `จำนวนเฉพาะ`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดจาก Pseudocode: คำนวณเงินเดือนสุทธิ",
+      description: "เขียนโค้ด Python ที่คำนวณเงินเดือนสุทธิจากเงินเดือนรวม 50000 บาท หลังหักภาษี 10%",
+      hint: "เงินเดือนสุทธิ = เงินเดือนรวม - (เงินเดือนรวม × 0.10)",
+      starterCode: "",
+      expectedOutput: `45000`,
+    },
+  ],
+
+  // Lesson 6: Python Variables and Data Types
+  6: [
+    {
+      id: "1",
+      title: "เขียนโค้ดสำหรับการสร้างตัวแปรและแสดงชนิดข้อมูล",
+      description: "เขียนโค้ด Python ที่สร้างตัวแปรต่อไปนี้ แล้วแสดงชนิดข้อมูล: name = 'สมชาย', age = 25, height = 5.9, is_student = True",
+      hint: "ใช้ type() เพื่อแสดงชนิดข้อมูล",
+      starterCode: "",
+      expectedOutput: `<class 'str'>\n<class 'int'>\n<class 'float'>\n<class 'bool'>`,
+    },
+    {
+      id: "2",
+      title: "เขียนโค้ดสำหรับการคำนวณด้วยตัวดำเนินการ",
+      description: "เขียนโค้ด Python ที่คำนวณ: 10 + 5, 10 - 5, 10 * 5, 10 / 5, 10 // 3, 10 % 3, 2 ** 3",
+      hint: "ใช้ print() เพื่อแสดงผลแต่ละการคำนวณ",
+      starterCode: "",
+      expectedOutput: `15\n5\n50\n2.0\n3\n1\n8`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดสำหรับการแปลงชนิดข้อมูล",
+      description: "เขียนโค้ด Python ที่แปลง '123' (string) เป็น int, 45 (int) เป็น float, 3.14 (float) เป็น int",
+      hint: "ใช้ int(), float(), str() เพื่อแปลงชนิดข้อมูล",
+      starterCode: "",
+      expectedOutput: `123\n45.0\n3`,
     },
   ],
 
@@ -291,51 +185,27 @@ print(is_even(7))   # ควรเป็น False`,
   7: [
     {
       id: "1",
-      title: "ตัดสินใจด้วย if-else",
-      description: "เขียนโค้ดตรวจสอบว่าเลขที่ป้อนเป็นบวก ลบ หรือศูนย์",
-      hint: "ใช้ if, elif, else",
-      starterCode: `num = 10
-
-if num > 0:
-    print("เลขบวก")
-elif num < 0:
-    print("เลขลบ")
-else:
-    print("ศูนย์")`,
-      expectedOutput: `เลขบวก`,
+      title: "เขียนโค้ดสำหรับการตรวจสอบอายุ",
+      description: "เขียนโค้ด Python ที่ตรวจสอบว่าอายุ 16 ปี สามารถขับรถได้หรือไม่ (ต้องอายุ >= 18)",
+      hint: "ใช้ if-else เพื่อตรวจสอบ",
+      starterCode: "",
+      expectedOutput: `ไม่สามารถขับรถได้`,
     },
     {
       id: "2",
-      title: "ตรวจสอบเกรด",
-      description: "สร้างฟังก์ชัน get_grade(score) ที่คืนค่าเกรดตามคะแนน",
-      hint: "90-100: A, 80-89: B, 70-79: C, 60-69: D, <60: F",
-      starterCode: `def get_grade(score):
-    if score >= 90:
-        return "A"
-    elif score >= 80:
-        return "B"
-    elif score >= 70:
-        return "C"
-    elif score >= 60:
-        return "D"
-    else:
-        return "F"
-
-print(get_grade(85))`,
-      expectedOutput: `B`,
+      title: "เขียนโค้ดสำหรับการให้เกรด",
+      description: "เขียนโค้ด Python ที่ให้เกรดตามคะแนน 75 (90-100: A, 80-89: B, 70-79: C, 60-69: D, <60: F)",
+      hint: "ใช้ if-elif-else",
+      starterCode: "",
+      expectedOutput: `C`,
     },
     {
       id: "3",
-      title: "ตรวจสอบอายุ",
-      description: "เขียนโค้ดตรวจสอบว่าบุคคลสามารถขับรถได้หรือไม่ (อายุ >= 18)",
-      hint: "ใช้ if-else",
-      starterCode: `age = 20
-
-if age >= 18:
-    print("สามารถขับรถได้")
-else:
-    print("ยังไม่สามารถขับรถได้")`,
-      expectedOutput: `สามารถขับรถได้`,
+      title: "เขียนโค้ดสำหรับการตรวจสอบจำนวน",
+      description: "เขียนโค้ด Python ที่ตรวจสอบว่าจำนวน -5 เป็นจำนวนบวก ลบ หรือศูนย์",
+      hint: "ใช้ if-elif-else เพื่อตรวจสอบ",
+      starterCode: "",
+      expectedOutput: `จำนวนลบ`,
     },
   ],
 
@@ -343,41 +213,27 @@ else:
   8: [
     {
       id: "1",
-      title: "ใช้ for loop พิมพ์ตัวเลข",
-      description: "เขียนโค้ด for loop เพื่อพิมพ์ตัวเลขจาก 1 ถึง 5",
-      hint: "ใช้ range(1, 6)",
-      starterCode: `for i in range(1, 6):
-    print(i)`,
-      expectedOutput: `1\n2\n3\n4\n5`,
+      title: "เขียนโค้ดสำหรับการแสดงเลข 1 ถึง 10",
+      description: "เขียนโค้ด Python ที่แสดงเลข 1 ถึง 10 โดยใช้ for loop",
+      hint: "ใช้ for i in range(1, 11):",
+      starterCode: "",
+      expectedOutput: `1\n2\n3\n4\n5\n6\n7\n8\n9\n10`,
     },
     {
       id: "2",
-      title: "คำนวณผลบวกด้วย while loop",
-      description: "เขียนโค้ด while loop เพื่อคำนวณผลบวกของตัวเลขจาก 1 ถึง 10",
-      hint: "ใช้ตัวแปร sum และ i",
-      starterCode: `sum_result = 0
-i = 1
-
-while i <= 10:
-    sum_result += i
-    i += 1
-
-print(f"ผลบวก = {sum_result}")`,
-      expectedOutput: `ผลบวก = 55`,
+      title: "เขียนโค้ดสำหรับการคำนวณผลบวก",
+      description: "เขียนโค้ด Python ที่คำนวณผลบวกของเลข 1 ถึง 100 โดยใช้ loop",
+      hint: "ใช้ for loop และตัวแปรเพื่อเก็บผลบวก",
+      starterCode: "",
+      expectedOutput: `5050`,
     },
     {
       id: "3",
-      title: "นับจำนวนเลขคู่",
-      description: "เขียนโค้ด for loop เพื่อนับจำนวนเลขคู่จาก 1 ถึง 20",
-      hint: "ใช้ if num % 2 == 0",
-      starterCode: `count = 0
-
-for num in range(1, 21):
-    if num % 2 == 0:
-        count += 1
-
-print(f"จำนวนเลขคู่ = {count}")`,
-      expectedOutput: `จำนวนเลขคู่ = 10`,
+      title: "เขียนโค้ดสำหรับการแสดงตารางสูตรคูณ",
+      description: "เขียนโค้ด Python ที่แสดงตารางสูตรคูณแม่ 5 (5×1 ถึง 5×10)",
+      hint: "ใช้ for loop และ f-string เพื่อแสดงผล",
+      starterCode: "",
+      expectedOutput: `5 × 1 = 5\n5 × 2 = 10\n5 × 3 = 15\n5 × 4 = 20\n5 × 5 = 25\n5 × 6 = 30\n5 × 7 = 35\n5 × 8 = 40\n5 × 9 = 45\n5 × 10 = 50`,
     },
   ],
 
@@ -385,43 +241,27 @@ print(f"จำนวนเลขคู่ = {count}")`,
   9: [
     {
       id: "1",
-      title: "สร้างฟังก์ชันง่ายๆ",
-      description: "สร้างฟังก์ชัน greet(name) ที่รับชื่อและพิมพ์ทักทาย",
-      hint: "ใช้ def เพื่อสร้างฟังก์ชัน",
-      starterCode: `def greet(name):
-    print(f"สวัสดี {name}")
-
-greet("สมชาย")`,
-      expectedOutput: `สวัสดี สมชาย`,
+      title: "เขียนฟังก์ชันสำหรับการคำนวณ BMI",
+      description: "เขียนฟังก์ชัน calculate_bmi(weight, height) ที่คำนวณ BMI = weight / (height ** 2) สำหรับ weight=70, height=1.75",
+      hint: "สร้างฟังก์ชันที่รับพารามิเตอร์ 2 ตัว แล้วคำนวณและ return ผลลัพธ์",
+      starterCode: "",
+      expectedOutput: `22.86`,
     },
     {
       id: "2",
-      title: "ฟังก์ชันที่มีค่าส่งกลับ",
-      description: "สร้างฟังก์ชัน add(a, b) ที่คืนค่าผลบวก",
-      hint: "ใช้ return เพื่อส่งค่ากลับ",
-      starterCode: `def add(a, b):
-    return a + b
-
-result = add(5, 3)
-print(f"ผลบวก = {result}")`,
-      expectedOutput: `ผลบวก = 8`,
+      title: "เขียนฟังก์ชันสำหรับการตรวจสอบเลขคู่",
+      description: "เขียนฟังก์ชัน is_even(num) ที่ return True ถ้าเป็นเลขคู่ สำหรับ num=42",
+      hint: "ใช้ num % 2 == 0 เพื่อตรวจสอบ",
+      starterCode: "",
+      expectedOutput: `True`,
     },
     {
       id: "3",
-      title: "ฟังก์ชันคำนวณแฟกทอเรียล",
-      description: "สร้างฟังก์ชัน factorial(n) ที่คำนวณแฟกทอเรียล",
-      hint: "แฟกทอเรียล 5 = 5 * 4 * 3 * 2 * 1 = 120",
-      starterCode: `def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        result = 1
-        for i in range(2, n + 1):
-            result *= i
-        return result
-
-print(f"5! = {factorial(5)}")`,
-      expectedOutput: `5! = 120`,
+      title: "เขียนฟังก์ชันสำหรับการคำนวณราคาหลังลด",
+      description: "เขียนฟังก์ชัน calculate_discount(price, percent) ที่คำนวณราคาหลังลด สำหรับ price=1000, percent=20",
+      hint: "return price - (price * percent / 100)",
+      starterCode: "",
+      expectedOutput: `800`,
     },
   ],
 
@@ -429,37 +269,27 @@ print(f"5! = {factorial(5)}")`,
   10: [
     {
       id: "1",
-      title: "สร้างและแสดงลิสต์",
-      description: "สร้างลิสต์ของตัวเลข แล้วแสดงผลแต่ละตัว",
-      hint: "ใช้ for loop เพื่อวนลูปผ่านลิสต์",
-      starterCode: `numbers = [10, 20, 30, 40, 50]
-
-for num in numbers:
-    print(num)`,
-      expectedOutput: `10\n20\n30\n40\n50`,
+      title: "เขียนโค้ดสำหรับการสร้างและแสดงลิสต์",
+      description: "เขียนโค้ด Python ที่สร้างลิสต์ของเลข [10, 20, 30, 40, 50] แล้วแสดงสมาชิกตัวที่ 1, 3, และ -1",
+      hint: "ใช้ index เพื่อเข้าถึงสมาชิก",
+      starterCode: "",
+      expectedOutput: `10\n30\n50`,
     },
     {
       id: "2",
-      title: "หาค่าเฉลี่ยของลิสต์",
-      description: "เขียนโค้ดหาค่าเฉลี่ยของตัวเลขในลิสต์",
-      hint: "ใช้ sum() และ len()",
-      starterCode: `numbers = [10, 20, 30, 40, 50]
-
-average = sum(numbers) / len(numbers)
-print(f"ค่าเฉลี่ย = {average}")`,
-      expectedOutput: `ค่าเฉลี่ย = 30.0`,
+      title: "เขียนโค้ดสำหรับการเพิ่มและลบสมาชิกในลิสต์",
+      description: "เขียนโค้ด Python ที่สร้างลิสต์ [1, 2, 3] แล้วเพิ่ม 4 และ 5 เข้าไป จากนั้นลบ 2 ออก",
+      hint: "ใช้ append() เพื่อเพิ่ม และ remove() เพื่อลบ",
+      starterCode: "",
+      expectedOutput: `[1, 3, 4, 5]`,
     },
     {
       id: "3",
-      title: "ใช้ Tuple",
-      description: "สร้าง Tuple ของข้อมูลส่วนตัว แล้วแสดงผล",
-      hint: "Tuple ใช้ () แทน []",
-      starterCode: `person = ("สมชาย", 25, "วิศวกร")
-
-print(f"ชื่อ: {person[0]}")
-print(f"อายุ: {person[1]}")
-print(f"อาชีพ: {person[2]}")`,
-      expectedOutput: `ชื่อ: สมชาย\nอายุ: 25\nอาชีพ: วิศวกร`,
+      title: "เขียนโค้ดสำหรับการคำนวณผลบวกของลิสต์",
+      description: "เขียนโค้ด Python ที่คำนวณผลบวกของลิสต์ [5, 10, 15, 20, 25]",
+      hint: "ใช้ sum() หรือ for loop",
+      starterCode: "",
+      expectedOutput: `75`,
     },
   ],
 
@@ -467,45 +297,27 @@ print(f"อาชีพ: {person[2]}")`,
   11: [
     {
       id: "1",
-      title: "ทำงานกับสตริง",
-      description: "เขียนโค้ดเพื่อแสดงความยาวของสตริง และแปลงเป็นตัวพิมพ์ใหญ่",
-      hint: "ใช้ len() และ upper()",
-      starterCode: `text = "python programming"
-
-print(f"ความยาว: {len(text)}")
-print(f"ตัวพิมพ์ใหญ่: {text.upper()}")`,
-      expectedOutput: `ความยาว: 19\nตัวพิมพ์ใหญ่: PYTHON PROGRAMMING`,
+      title: "เขียนโค้ดสำหรับการจัดการสตริง",
+      description: "เขียนโค้ด Python ที่แสดงความยาว ตัวอักษรตัวใหญ่ ตัวอักษรตัวเล็ก และกลับลำดับของสตริง 'Python'",
+      hint: "ใช้ len(), upper(), lower(), และ slicing [::-1]",
+      starterCode: "",
+      expectedOutput: `6\nPYTHON\npython\nnohtyP`,
     },
     {
       id: "2",
-      title: "สร้างและใช้ Dictionary",
-      description: "สร้าง Dictionary เก็บข้อมูลนักเรียน แล้วแสดงผล",
-      hint: "ใช้ {} และ key: value",
-      starterCode: `student = {
-    "name": "สมชาย",
-    "age": 20,
-    "gpa": 3.5
-}
-
-print(f"ชื่อ: {student['name']}")
-print(f"อายุ: {student['age']}")
-print(f"GPA: {student['gpa']}")`,
-      expectedOutput: `ชื่อ: สมชาย\nอายุ: 20\nGPA: 3.5`,
+      title: "เขียนโค้ดสำหรับการสร้างและแสดงดิกชันนารี",
+      description: "เขียนโค้ด Python ที่สร้างดิกชันนารี {'name': 'สมชาย', 'age': 25, 'city': 'กรุงเทพ'} แล้วแสดงค่าของ 'name' และ 'age'",
+      hint: "ใช้ dictionary[key] เพื่อเข้าถึงค่า",
+      starterCode: "",
+      expectedOutput: `สมชาย\n25`,
     },
     {
       id: "3",
-      title: "วนลูปผ่าน Dictionary",
-      description: "เขียนโค้ดวนลูปผ่าน Dictionary แสดงราคาสินค้า",
-      hint: "ใช้ for key, value in dict.items()",
-      starterCode: `products = {
-    "apple": 50,
-    "banana": 30,
-    "orange": 40
-}
-
-for product, price in products.items():
-    print(f"{product}: {price} บาท")`,
-      expectedOutput: `apple: 50 บาท\nbanana: 30 บาท\norange: 40 บาท`,
+      title: "เขียนโค้ดสำหรับการเพิ่มและลบสมาชิกในดิกชันนารี",
+      description: "เขียนโค้ด Python ที่สร้างดิกชันนารี {'product': 'Apple', 'price': 50} แล้วเพิ่ม 'quantity': 10 และลบ 'price'",
+      hint: "ใช้ dict[key] = value เพื่อเพิ่ม และ del dict[key] เพื่อลบ",
+      starterCode: "",
+      expectedOutput: `{'product': 'Apple', 'quantity': 10}`,
     },
   ],
 
@@ -513,36 +325,27 @@ for product, price in products.items():
   12: [
     {
       id: "1",
-      title: "อ่านและเขียนไฟล์",
-      description: "เขียนโค้ดเพื่อเขียนข้อมูลลงไฟล์ แล้วอ่านกลับมา",
-      hint: "ใช้ open() กับ mode 'w' สำหรับเขียน และ 'r' สำหรับอ่าน",
-      starterCode: `# เขียนลงไฟล์
-with open("data.txt", "w") as file:
-    file.write("สวัสดี Python\\n")
-    file.write("นี่คือไฟล์ข้อมูล")
-
-# อ่านจากไฟล์
-with open("data.txt", "r") as file:
-    content = file.read()
-    print(content)`,
-      expectedOutput: `สวัสดี Python\nนี่คือไฟล์ข้อมูล`,
+      title: "เขียนโค้ดสำหรับการเขียนข้อมูลลงไฟล์",
+      description: "เขียนโค้ด Python ที่เขียนข้อความ 'Hello, World!' ลงไฟล์ชื่อ 'output.txt'",
+      hint: "ใช้ open() และ write()",
+      starterCode: "",
+      expectedOutput: `ไฟล์สร้างเรียบร้อย`,
     },
     {
       id: "2",
-      title: "อ่านไฟล์บรรทัดต่อบรรทัด",
-      description: "เขียนโค้ดเพื่ออ่านไฟล์บรรทัดต่อบรรทัด",
-      hint: "ใช้ for line in file หรือ readlines()",
-      starterCode: `# เขียนลงไฟล์
-with open("lines.txt", "w") as file:
-    file.write("บรรทัดที่ 1\\n")
-    file.write("บรรทัดที่ 2\\n")
-    file.write("บรรทัดที่ 3")
-
-# อ่านบรรทัดต่อบรรทัด
-with open("lines.txt", "r") as file:
-    for line in file:
-        print(line.strip())`,
-      expectedOutput: `บรรทัดที่ 1\nบรรทัดที่ 2\nบรรทัดที่ 3`,
+      title: "เขียนโค้ดสำหรับการอ่านข้อมูลจากไฟล์",
+      description: "เขียนโค้ด Python ที่สร้างไฟล์ 'test.txt' ที่มีข้อความ 'Python Programming' แล้วอ่านและแสดงข้อมูล",
+      hint: "ใช้ open() และ read()",
+      starterCode: "",
+      expectedOutput: `Python Programming`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดสำหรับการเขียนลิสต์ลงไฟล์",
+      description: "เขียนโค้ด Python ที่เขียนลิสต์ [1, 2, 3, 4, 5] ลงไฟล์ 'numbers.txt' โดยแต่ละตัวเลขอยู่บรรทัดเดียว",
+      hint: "ใช้ for loop และ write()",
+      starterCode: "",
+      expectedOutput: `ไฟล์สร้างเรียบร้อย`,
     },
   ],
 
@@ -550,28 +353,27 @@ with open("lines.txt", "r") as file:
   13: [
     {
       id: "1",
-      title: "จัดการข้อผิดพลาด ZeroDivisionError",
-      description: "เขียนโค้ด try-except เพื่อจัดการข้อผิดพลาดการหารด้วยศูนย์",
-      hint: "ใช้ try-except",
-      starterCode: `try:
-    result = 10 / 0
-except ZeroDivisionError:
-    print("ไม่สามารถหารด้วยศูนย์ได้")
-else:
-    print(f"ผลลัพธ์ = {result}")`,
-      expectedOutput: `ไม่สามารถหารด้วยศูนย์ได้`,
+      title: "เขียนโค้ดสำหรับการจัดการ ValueError",
+      description: "เขียนโค้ด Python ที่พยายามแปลง 'abc' เป็น int และจัดการข้อผิดพลาด",
+      hint: "ใช้ try-except เพื่อจัดการข้อผิดพลาด",
+      starterCode: "",
+      expectedOutput: `ข้อผิดพลาด: ไม่สามารถแปลงเป็นตัวเลขได้`,
     },
     {
       id: "2",
-      title: "จัดการข้อผิดพลาด ValueError",
-      description: "เขียนโค้ด try-except เพื่อจัดการข้อผิดพลาดการแปลงชนิดข้อมูล",
-      hint: "ใช้ try-except เมื่อแปลงสตริงเป็นตัวเลข",
-      starterCode: `try:
-    num = int("abc")
-    print(f"ตัวเลข = {num}")
-except ValueError:
-    print("ข้อมูลที่ป้อนไม่ใช่ตัวเลข")`,
-      expectedOutput: `ข้อมูลที่ป้อนไม่ใช่ตัวเลข`,
+      title: "เขียนโค้ดสำหรับการจัดการ ZeroDivisionError",
+      description: "เขียนโค้ด Python ที่พยายามหาร 10 ด้วย 0 และจัดการข้อผิดพลาด",
+      hint: "ใช้ try-except เพื่อจัดการข้อผิดพลาด",
+      starterCode: "",
+      expectedOutput: `ข้อผิดพลาด: ไม่สามารถหารด้วยศูนย์ได้`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดสำหรับการจัดการ IndexError",
+      description: "เขียนโค้ด Python ที่พยายามเข้าถึง index ที่ไม่มีในลิสต์ [1, 2, 3] และจัดการข้อผิดพลาด",
+      hint: "ใช้ try-except เพื่อจัดการข้อผิดพลาด",
+      starterCode: "",
+      expectedOutput: `ข้อผิดพลาด: index ไม่อยู่ในลิสต์`,
     },
   ],
 
@@ -579,46 +381,60 @@ except ValueError:
   14: [
     {
       id: "1",
-      title: "ระบบจัดการร้านค้า - คำนวณยอดขาย",
-      description: "เขียนโค้ดคำนวณยอดขายรวมจากรายการสินค้า",
-      hint: "ใช้ for loop และ Dictionary",
-      starterCode: `products = {
-    "apple": {"price": 50, "quantity": 10},
-    "banana": {"price": 30, "quantity": 20}
-}
-
-total_sales = 0
-for product, data in products.items():
-    sales = data["price"] * data["quantity"]
-    total_sales += sales
-    print(f"{product}: {sales} บาท")
-
-print(f"ยอดขายรวม: {total_sales} บาท")`,
-      expectedOutput: `apple: 500 บาท\nbanana: 600 บาท\nยอดขายรวม: 1100 บาท`,
+      title: "เขียนโค้ดสำหรับการคำนวณเงินเดือนสุทธิ",
+      description: "เขียนโค้ด Python ที่คำนวณเงินเดือนสุทธิจากเงินเดือนรวม 50000 บาท หลังหักภาษี 10% และประกันสังคม 5%",
+      hint: "เงินเดือนสุทธิ = เงินเดือนรวม - (ภาษี + ประกันสังคม)",
+      starterCode: "",
+      expectedOutput: `42500`,
     },
     {
       id: "2",
-      title: "ระบบจัดการร้านค้า - คำนวณมูลค่าสินค้า",
-      description: "เขียนโค้ดคำนวณมูลค่ารวมของสินค้าคงคลัง",
-      hint: "ใช้ for loop และ Dictionary",
-      starterCode: `products = {
-    "apple": {"price": 50, "quantity": 10},
-    "banana": {"price": 30, "quantity": 20}
-}
+      title: "เขียนโค้ดสำหรับการคำนวณราคาสินค้าหลังลดราคา",
+      description: "เขียนโค้ด Python ที่คำนวณราคาสินค้าหลังลดราคา 15% จากราคาเดิม 2000 บาท และบวกภาษีมูลค่าเพิ่ม 7%",
+      hint: "ราคาหลังลด = ราคาเดิม × 0.85, ราคาสุดท้าย = ราคาหลังลด × 1.07",
+      starterCode: "",
+      expectedOutput: `1819.5`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดสำหรับการจัดการข้อมูลร้านค้า",
+      description: "เขียนโค้ด Python ที่จัดเก็บข้อมูลสินค้า (ชื่อ, ราคา, จำนวน) ในดิกชันนารี แล้วคำนวณมูลค่ารวม",
+      hint: "มูลค่ารวม = ราคา × จำนวน",
+      starterCode: "",
+      expectedOutput: `15000`,
+    },
+  ],
 
-# คำนวณมูลค่าสินค้า
-total_value = 0
-for product, data in products.items():
-    value = data["price"] * data["quantity"]
-    total_value += value
-    print(f"{product}: {value} บาท")
-
-print(f"มูลค่ารวม: {total_value} บาท")`,
-      expectedOutput: `apple: 500 บาท\nbanana: 600 บาท\nมูลค่ารวม: 1100 บาท`,
+  // Lesson 15: Summary and Review
+  15: [
+    {
+      id: "1",
+      title: "เขียนโค้ดสำหรับการสรุปทั้งหมด",
+      description: "เขียนโค้ด Python ที่รวมความรู้ทั้งหมด: สร้างฟังก์ชัน, ใช้ loop, ใช้ conditional, และจัดการข้อผิดพลาด",
+      hint: "ลองเขียนโปรแกรมที่รวมหลายเรื่องที่เรียนมา",
+      starterCode: "",
+      expectedOutput: `โปรแกรมทำงานได้ถูกต้อง`,
+    },
+    {
+      id: "2",
+      title: "เขียนโค้ดสำหรับการแก้ปัญหาจริง",
+      description: "เขียนโค้ด Python ที่แก้ปัญหาจริง เช่น การคำนวณเงินเดือน การจัดการข้อมูล หรือการประมวลผลข้อมูล",
+      hint: "ลองคิดถึงปัญหาที่พบในชีวิตจริงและแก้ด้วยโค้ด",
+      starterCode: "",
+      expectedOutput: `ปัญหาแก้ไขได้สำเร็จ`,
+    },
+    {
+      id: "3",
+      title: "เขียนโค้ดสำหรับการทดสอบตัวเอง",
+      description: "เขียนโค้ด Python ที่ทดสอบความเข้าใจของคุณในทั้ง 15 บท",
+      hint: "ลองเขียนโปรแกรมที่ใช้ความรู้ทั้งหมดที่เรียนมา",
+      starterCode: "",
+      expectedOutput: `ทดสอบเสร็จสิ้น`,
     },
   ],
 };
 
+// Helper function to get exercises for a specific lesson
 export function getExercisesForLesson(lessonId: number): Exercise[] {
   return exercisesByLesson[lessonId] || [];
 }

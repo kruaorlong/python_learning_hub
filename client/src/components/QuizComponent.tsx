@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 import { CheckCircle2, XCircle, RotateCcw } from 'lucide-react';
 import type { Quiz, QuizQuestion } from '@/data/quizzes';
 
@@ -21,6 +22,8 @@ export default function QuizComponent({ quiz, onComplete }: QuizComponentProps) 
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
+  const [studentName, setStudentName] = useState('');
+  const [nameSubmitted, setNameSubmitted] = useState(false);
 
   const currentQuestion = quiz.questions[currentQuestionIndex];
   const isLastQuestion = currentQuestionIndex === quiz.questions.length - 1;
@@ -71,8 +74,11 @@ export default function QuizComponent({ quiz, onComplete }: QuizComponentProps) 
     setAnswers({});
     setShowResults(false);
     setQuizStarted(false);
+    setNameSubmitted(false);
+    setStudentName('');
   };
 
+  // Screen 1: Name Input Screen
   if (!quizStarted) {
     return (
       <Card className="w-full max-w-2xl mx-auto">
@@ -96,9 +102,36 @@ export default function QuizComponent({ quiz, onComplete }: QuizComponentProps) 
               <br />
               ✅ จะเห็นเฉลยและคะแนนหลังส่งแบบทดสอบ
             </p>
+            
+            {/* Name Input Section */}
+            <div className="mt-6 p-4 bg-teal-50 rounded-lg border-2 border-teal-200">
+              <Label htmlFor="student-name" className="block text-sm font-semibold mb-2">
+                📝 กรุณาป้อนชื่อของคุณ:
+              </Label>
+              <Input
+                id="student-name"
+                type="text"
+                placeholder="เช่น สมชาย ใจดี"
+                value={studentName}
+                onChange={(e) => setStudentName(e.target.value)}
+                className="w-full"
+              />
+              <p className="text-xs text-gray-600 mt-2">
+                ชื่อนี้จะแสดงในผลการทดสอบของคุณ
+              </p>
+            </div>
+
             <Button 
-              onClick={() => setQuizStarted(true)}
-              className="w-full mt-6 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white py-6 text-lg"
+              onClick={() => {
+                if (studentName.trim()) {
+                  setQuizStarted(true);
+                  setNameSubmitted(true);
+                } else {
+                  alert('กรุณาป้อนชื่อของคุณ');
+                }
+              }}
+              disabled={!studentName.trim()}
+              className="w-full mt-6 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white py-6 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               🚀 เริ่มแบบทดสอบ
             </Button>
@@ -108,6 +141,7 @@ export default function QuizComponent({ quiz, onComplete }: QuizComponentProps) 
     );
   }
 
+  // Screen 2: Results Screen
   if (showResults) {
     const score = calculateScore();
     const percentage = (score / quiz.questions.length) * 100;
@@ -120,8 +154,11 @@ export default function QuizComponent({ quiz, onComplete }: QuizComponentProps) 
         </CardHeader>
         <CardContent className="pt-6">
           <div className="space-y-6">
-            {/* Score Summary */}
-            <div className="text-center">
+            {/* Student Name and Score Summary */}
+            <div className="text-center bg-gradient-to-r from-teal-50 to-emerald-50 p-6 rounded-lg">
+              <p className="text-lg font-semibold text-gray-700 mb-2">👤 ชื่อผู้ทำแบบทดสอบ</p>
+              <p className="text-3xl font-bold text-teal-600 mb-4">{studentName}</p>
+              
               <div className={`text-5xl font-bold mb-2 ${isPassed ? 'text-green-600' : 'text-orange-600'}`}>
                 {score}/{quiz.questions.length}
               </div>
@@ -190,6 +227,7 @@ export default function QuizComponent({ quiz, onComplete }: QuizComponentProps) 
     );
   }
 
+  // Screen 3: Quiz Questions Screen
   return (
       <Card className="w-full max-w-2xl mx-auto">
         <CardHeader className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white">
@@ -199,6 +237,7 @@ export default function QuizComponent({ quiz, onComplete }: QuizComponentProps) 
             <CardDescription className="text-teal-100">
               คำถามที่ {currentQuestionIndex + 1} จาก {quiz.questions.length}
             </CardDescription>
+            <p className="text-sm mt-2">👤 {studentName}</p>
           </div>
           <div className="text-right">
             <p className="text-sm">ตอบแล้ว</p>

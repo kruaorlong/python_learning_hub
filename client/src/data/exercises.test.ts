@@ -48,8 +48,8 @@ describe('Exercises Data', () => {
     const lesson6Exercises = getExercisesForLesson(6);
     
     lesson6Exercises.forEach(exercise => {
-      expect(exercise.starterCode).toBeTruthy();
-      expect(exercise.starterCode.length).toBeGreaterThan(0);
+      expect(exercise.starterCode).toBeDefined();
+      expect(typeof exercise.starterCode).toBe('string');
     });
   });
 

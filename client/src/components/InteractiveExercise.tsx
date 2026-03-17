@@ -10,7 +10,7 @@ interface Exercise {
   description: string;
   hint: string;
   expectedOutput?: string;
-  starterCode: string;
+  starterCode?: string;
 }
 
 interface InteractiveExerciseProps {
@@ -99,7 +99,7 @@ export default function InteractiveExercise({
 
                   {/* Code Editor */}
                   <PythonCodeEditor
-                    initialCode={exercise.starterCode}
+                    initialCode={exercise.starterCode || ''}
                     title={`แบบฝึกหัด ${exercise.id}`}
                     hint={exercise.hint}
                   />
