@@ -12,7 +12,7 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-3 bg-white bg-opacity-20 px-4 py-2 rounded-lg backdrop-blur-sm">
           <img 
-            src="https://img5.pic.in.th/file/secure-sv1/IMG_3707a7d56643ed653215.jpeg" 
+            src="https://img1.pic.in.th/images/-2569-03-17--22.55.28.png" 
             alt="ครูฤทัยรัตน์ คำดี" 
             className="w-12 h-12 rounded-full object-cover border-2 border-white"
           />

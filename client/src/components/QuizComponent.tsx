@@ -210,17 +210,7 @@ export default function QuizComponent({ quiz, onComplete }: QuizComponentProps) 
               })}
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex gap-3 pt-4">
-              <Button 
-                onClick={handleReset}
-                variant="outline"
-                className="flex-1"
-              >
-                <RotateCcw className="w-4 h-4 mr-2" />
-                ทำแบบทดสอบใหม่
-              </Button>
-            </div>
+            {/* No action buttons - quiz can only be taken once */}
           </div>
         </CardContent>
       </Card>

@@ -40,3 +40,9 @@
 - [ ] Add export results to PDF
 - [ ] Add teacher dashboard
 - [ ] Add student analytics
+
+
+## Current Work (In Progress)
+
+- [x] Remove "ทำแบบทดสอบใหม่" button from quiz results
+- [x] Add teacher photo to Header component
